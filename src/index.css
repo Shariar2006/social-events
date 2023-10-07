@@ -35,8 +35,8 @@
     transition: 0.5s;
 }
 
-.slide .item:nth-child(1),
-.slide .item:nth-child(2){
+
+.slide .item{
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -46,15 +46,7 @@
 }
 
 
-.slide .item:nth-child(3){
-    left: 40%;
-}
-.slide .item:nth-child(4){
-    left: calc(40% + 220px);
-}
-.slide .item:nth-child(5){
-    left: calc(40% + 440px);
-}
+
 
 /* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6){

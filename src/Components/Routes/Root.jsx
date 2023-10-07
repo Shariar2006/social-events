@@ -6,6 +6,12 @@ const Root = () => {
         <div className="max-w-[1440px] mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
+
+
+            
+
+
+
         </div>
     );
 };

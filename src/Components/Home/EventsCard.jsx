@@ -3,8 +3,13 @@
 import { Link } from "react-router-dom";
 
 const EventsCard = ({ eventdata }) => {
-    const {id, EventType, card_img, event_title, Description, Location, text_color} = eventdata
+    const {id, EventType, card_img,price, Description, text_color} = eventdata
     return (
+        <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        >
+
         <div className="h-[550px]">
             <div className="relative flex h-full flex-col rounded-xl bg-white bg-clip-border   shadow-md" 
             style={{ backgroundRepeat:"no-repeat", backgroundSize: "cover", backgroundImage: `url(${card_img})` }}>
@@ -30,9 +35,11 @@ const EventsCard = ({ eventdata }) => {
                         <p>{Description}</p>
                         }
                     </p>
+                    <p className="text-lg font-medium" style={{color:text_color}}>{price}</p>
                 </div>
                 
             </div>
+        </div>
         </div>
     );
 };
