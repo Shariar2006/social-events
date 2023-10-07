@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "EventType": "Wedding",
+        "card_img": "https://www.laroyale.co.uk/wp-content/uploads/2021/05/la-royale-banqueting-suite-event-wedding-occasions-29.jpg",
+        "event_title": "Enchanted Garden Wedding",
+        "Description": "Join us in celebrating the union of two souls in a beautiful and heartwarming ceremony that will take place at the enchanting Elegant Gardens. Emma Johnson and James Smith, deeply in love and ready to embark on their lifelong journey together, invite you to witness this special day. The day will begin with a touching ceremony at 4:00 PM, where vows of love and commitment will be exchanged under the canopy of nature's beauty. Following the ceremony, a grand reception will commence at 6:00 PM. Expect an evening filled with delicious cuisine, live music, and dancing under the stars. Your presence will be the greatest gift, but if you wish to honor the couple with a token of your love, a gift registry is available at 'LoveUnitesRegistry.com/EmmaAndJames'. Dress in your finest attire and prepare to share in the joy and love of Emma and James as they start this incredible chapter of their lives together. Let's make their wedding day one to remember!",
+        "Location": "Elegant Gardens",
+        "price": "$150 per person and VIP: $250 per person",
+        "text_color": "#f8fafc"
+    },
+    {
+        "id": 2,
+        "EventType": "Birthday Party",
+        "card_img": "https://c4.wallpaperflare.com/wallpaper/241/116/966/candles-cake-cake-sweet-wallpaper-preview.jpg",
+        "event_title": "Roaring Twenties Birthday Bash",
+        "Description": "Come and celebrate Sarah's 30th birthday with a day of fun and laughter. The party will be hosted at Sarah's Residence, starting at 2:00 PM. There will be delicious food, exciting games, and a special cake to mark this milestone. Please join us in making this day extra special for Sarah as she enters a new decade of her life. Your presence is the best gift she could ask for!",
+        "Location": "Sarah's Residence",
+        "price": " $30 per person (under 12 Free)",
+        "text_color": "#C40DA2"
+    },
+    {
+        "id": 3,
+        "EventType": "Anniversary",
+        
+        "card_img": "https://m.media-amazon.com/images/I/811igjId-YL.jpg",
+        "event_title": "Golden Love Celebration",
+        "Description": "Join us in celebrating the 25th wedding anniversary of Richard and Lisa Anderson. It's a testament to love, commitment, and enduring happiness. The event will take place at the luxurious Grand Palace Hotel, starting at 7:00 PM with a romantic dinner followed by dancing until midnight. Your presence will add to the joy of this remarkable milestone in their lives.",
+        "Location": "Grand Palace Hotel",
+        "price": "$100 per person",
+        "text_color":"#f8fafc"
+    },
+    {
+        "id": 4,
+        "EventType": "Engagement Party",
+        "card_img": "https://housing.com/news/wp-content/uploads/2023/01/engagement-stage-decoration-ideas-at-home-3.png",
+        "event_title": "A Journey to Forever",
+        "Description": "Let's celebrate the engagement of John Smith and Emily Johnson! Join us at the City View Rooftop Lounge at 8:00 PM for an evening of music, dancing, and good company. It's a special occasion as they embark on this journey of love and commitment. Your presence will make it even more memorable.",
+        "Location": "City View Rooftop Lounge",
+        "price": "$50 per person",
+        "text_color":"#f8fafc"
+    },
+    {
+        "id": 5,
+        "EventType": "Retirement Party",
+        "card_img": "https://m.media-amazon.com/images/I/712NU6kaIRL._SX522_.jpg",
+        "event_title": "Cheers to New Beginnings",
+        "Description": "Join us in honoring David Roberts for his 40 years of dedicated service. The retirement luncheon will be held at the Corporate Conference Center, starting at 12:00 PM. It's a time to celebrate David's achievements and wish him well on his journey into retirement. Your presence will be greatly appreciated.",
+        "Location": "Corporate Conference Center",
+        "price": "$40 per person",
+        "text_color":"#d97706"
+    },
+    {
+        "id": 6,
+        "EventType": "Baby Shower",
+    
+        "card_img": "https://m.media-amazon.com/images/I/812wiQS325L._SL1200_.jpg",
+        "event_title": "Oh Baby, It's a Garden Party",
+        "Description": "We're excited to invite you to a sweet and welcoming baby shower for Jessica White as she prepares for motherhood. The event will take place at Jessica's Home, starting at 2:00 PM. There will be games, delicious treats, and a chance to offer your best wishes and gifts for the new arrival. Let's shower Jessica with love and support!",
+        "Location": "Jessica's Home",
+        "price": "$20 per person (under 12 Free)",
+        "text_color":"#070508"
+    }
+]
