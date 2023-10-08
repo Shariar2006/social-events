@@ -1,22 +1,28 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import SingleEventCard from "./SingleEventCard";
+import SingleCard from "./SingleCard";
+
 
 const EventCard = () => {
-    const [eventData, setEventData] = useState()
+    const [card, setCard] = useState()
 
     const {id} = useParams()
+    
 
-    const eventSingleCard = useLoaderData()
+    const singleCard = useLoaderData()
+    // console.log(singleCard)
 
     useEffect(() => {
-        const findCard = eventSingleCard?.find(findCard => findCard.id == id)
-        setEventData(findCard)
-    },[])
+        const findCard = singleCard?.find(findCard => findCard.id == id)
+        setCard(findCard)
+    }, [id, singleCard])
+
+    
 
     return (
         <div>
-            <SingleEventCard eventData={eventData}></SingleEventCard>
+            
+            <SingleCard card={card}></SingleCard>
         </div>
     );
 };

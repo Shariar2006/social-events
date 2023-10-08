@@ -35,7 +35,7 @@ import EventCard from "../EventCard/EventCard";
             {
                 path: '/eventCards/:id',
                 element: <EventCard></EventCard>,
-                loader: () => fetch('events.json')
+                loader: () => fetch('/events.json')
             }
           ]
         },
