@@ -5,6 +5,8 @@ import Login from "../Login/Login";
 import Contact from "../Contact/Contact";
 import Register from "../Register/Register";
 
+import EventCard from "../EventCard/EventCard";
+
 
 
     const Route = createBrowserRouter([
@@ -17,6 +19,7 @@ import Register from "../Register/Register";
                 element: <Home></Home>,
                 loader: () => fetch('events.json')
             },
+            
             {
                 path: '/contactUs',
                 element: <Contact></Contact>
@@ -28,6 +31,11 @@ import Register from "../Register/Register";
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/eventCards/:id',
+                element: <EventCard></EventCard>,
+                loader: () => fetch('events.json')
             }
           ]
         },

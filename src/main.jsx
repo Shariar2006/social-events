@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import Route from './Components/Routes/Route';
+import Route from './Components/Routes/Router';
 
 
 

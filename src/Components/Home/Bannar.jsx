@@ -3,9 +3,9 @@
 const Bannar = () => {
     return (
         <div>
-            <div className="carousel h-[50vh] md:h-[70vh] lg:h-screen">
+            <div className="carousel h-[50vh] md:h-[70vh] lg:h-[90vh]">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://c1.wallpaperflare.com/preview/1001/173/163/beach-beach-wedding-chairs-clouds.jpg" className="w-full" />
+                    <img src="https://www.brides.com/thmb/cbMCgSKGIKFWcr6MIOBj52CWOqU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/CeliaMichael-118-fc49f52f07f64f1c9f1aafceab496dd2.jpg" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide6" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>

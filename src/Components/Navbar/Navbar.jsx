@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const navlink = <>
     <li><NavLink to='/' 
-    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-600 underline rounded-lg px-3 py-2 " : "mx-2"}>Home</NavLink></li>
+    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Home</NavLink></li>
     <li><NavLink to='/contactUs'
-    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-600 underline rounded-lg px-3 py-2 " : "mx-2"}>Contact Us</NavLink></li>
+    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Contact Us</NavLink></li>
     <li><NavLink to='/register'
-    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-600 underline rounded-lg px-3 py-2 " : "mx-2"}>Register</NavLink></li>
+    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Register</NavLink></li>
 </>
 const Navbar = () => {
     return (
@@ -22,7 +22,7 @@ const Navbar = () => {
                             {navlink}
                         </ul>
                     </div>
-                    <h1 className="text-2xl font-bold">Happy <span className="text-pink-600">Events</span></h1>
+                    <h1 className="text-2xl font-bold">Happy <span className="text-pink-500">Events</span></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="text-xl font-semibold menu-horizontal mr-2">
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <button className="text-xl font-semibold"><NavLink to='/login'
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? " text-pink-600 underline rounded-lg px-3 py-2 " : ""
+                            isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : ""
                         }
                     >Login</NavLink></button>
                 </div>
