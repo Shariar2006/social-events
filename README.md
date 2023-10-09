@@ -122,9 +122,13 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3?
 
-<i>Write your explanation here</i>
+<i>The first element, 0, is falsy (equal to 0), so the if condition is not met, and count remains 0.
+The second element, 1, is truthy (not equal to 0), so the if condition is met, and count is incremented by 1. Now, count is 1.
+The third element, 2, is also truthy (not equal to 0), so count is incremented again. Now, count is 2.
+The fourth element, 3, is also truthy (not equal to 0), so count is incremented once more. Now, count is 3.
+After the loop has finished iterating over all the elements in the nums array, the value of count is 3. Therefore, when you log count to the console, it displays 3.</i>
 
 </p>
 </details>
