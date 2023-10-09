@@ -1,34 +1,57 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import swal from "sweetalert";
 
 
 const Login = () => {
 
-    const { user, userLogin } = useContext(AuthContext)
+    const { userLogin, singInWithGoogle } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    
 
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
+
+        
+
         userLogin(email, password)
             .then(result => {
                 console.log(result.user)
+                swal("Good job!", "You are successfully logged in!", "success");
+                navigate(location?.state ? location.state: '/')
             })
-            .catch(error => { console.log(error) })
+            .catch(() => {  
+                
+                    if(!email){
+                        swal("Sorry!", "Email doesn't match!", "error");
+                     return;
+                    }
+                 
+            })
     }
 
-    if (user) {
-        swal("Good job!", "You are successfully logged in!", "success");
+    const handleGoogleLogin = () =>{
+        singInWithGoogle()
+        .then(()=>{
+            swal("Good job!", "You are successfully logged in!", "success");
+            navigate(location?.state ? location.state: '/')
+        })
+    .catch(() =>{})
     }
+
+   
     
 
     return (
         <div>
             <div className="hero min-h-[80vh]">
-                <div className=" font2">
+                <div className=" font5">
 
                     <h1 className="text-2xl text-pink-500 font-bold text-center mb-2">Login</h1>
                     <div className=" card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -52,6 +75,7 @@ const Login = () => {
                                 <button className="btn bg-gradient-to-tr from-pink-600 to-pink-400 shadow-pink-500/40 text-white">Login</button>
                             </div>
                             <p>Don't have an account? <Link to='/register' className="text-pink-600 font-bold">Register</Link></p>
+                            <p>Log in with <span onClick={handleGoogleLogin} className="text-pink-600 cursor-pointer">Google</span></p>
                         </form>
                     </div>
                 </div>

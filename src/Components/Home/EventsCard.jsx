@@ -13,7 +13,7 @@ const EventsCard = ({ eventdata }) => {
             <div className="card h-[500px] bg-base-100 shadow-xl image-full">
                 <figure><img src={card_img} /></figure>
                 <div className="card-body">
-                    <h2 className="mt-14 text-2xl font-bold font2">{EventType}</h2>
+                    <h2 className="mt-14 text-2xl font-bold font5">{EventType}</h2>
                     <p className=" text-lg font-semibold" >
                         {
                             Description.length > 200 ? <p>{Description.slice(0, 200)}
@@ -23,7 +23,7 @@ const EventsCard = ({ eventdata }) => {
                                     type="button"
                                     data-ripple-light="true"
                                 >
-                                    <Link to={`/eventCards/${id}`} className='font2'>Read More...</Link>
+                                    <Link to={`/eventCards/${id}`} className='font5'>Read More...</Link>
                                 </button>
                             </p> :
                                 <p>{Description}</p>

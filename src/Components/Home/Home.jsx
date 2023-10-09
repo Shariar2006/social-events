@@ -22,7 +22,7 @@ const Home = () => {
                 <h1 className='text-center text-3xl font-bold p-6 font2'>Our <span className="text-pink-600">Services</span></h1>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mb-10 font'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mb-10 font4'>
                 {
                     eventsCardData?.map(eventdata => <EventsCard eventdata={eventdata} key={eventdata.id}></EventsCard>)
                 }

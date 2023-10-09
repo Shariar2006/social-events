@@ -6,6 +6,8 @@ import Contact from "../Contact/Contact";
 import Register from "../Register/Register";
 
 import EventCard from "../EventCard/EventCard";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import BookedEvent from "../Booked/BookedEvent";
 
 
 
@@ -25,6 +27,10 @@ import EventCard from "../EventCard/EventCard";
                 element: <Contact></Contact>
             },
             {
+                path: '/bookedEvents',
+                element: <PrivateRoute><BookedEvent></BookedEvent></PrivateRoute>
+            },
+            {
                 path: '/register',
                 element: <Register></Register>
             },
@@ -34,7 +40,7 @@ import EventCard from "../EventCard/EventCard";
             },
             {
                 path: '/eventCards/:id',
-                element: <EventCard></EventCard>,
+                element: <PrivateRoute><EventCard></EventCard></PrivateRoute>,
                 loader: () => fetch('/events.json')
             }
           ]
