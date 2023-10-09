@@ -1,5 +1,5 @@
 import { useContext, } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import swal from "sweetalert";
 import '../../index.css'
@@ -8,7 +8,7 @@ import '../../index.css'
 const Register = () => {
 
 
-    const { createUser } = useContext(AuthContext)
+    const { user,createUser } = useContext(AuthContext)
     // const [registerError, setError] = useState('')
 
     const handleRegister = e => {
@@ -34,6 +34,7 @@ const Register = () => {
             .then((result) => {
                 console.log(result.user)
                 swal("Good job!", "You are successfully Registration!", "success");
+                <Navigate to='/login'></Navigate>
             })
             .catch(() => {
 

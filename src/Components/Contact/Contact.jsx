@@ -3,7 +3,7 @@
 const Contact = () => {
     return (
         <div>
-            <div className="hero min-h-[80vh]" style={{ backgroundImage: 'url(https://i.ibb.co/HFGCnpw/istockphoto-1441262452-1024x1024.jpg)' }}>
+            <div className="hero min-h-[90vh]" style={{backgroundSize: 'cover', backgroundImage: 'url(https://i.ibb.co/HFGCnpw/istockphoto-1441262452-1024x1024.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">

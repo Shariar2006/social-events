@@ -7,31 +7,36 @@ import swal from "sweetalert";
 
 const Login = () => {
 
-    const { userLogin, singInWithGoogle } = useContext(AuthContext)
+    const { user, userLogin, singInWithGoogle } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
 
-    
+    console.log(user)
 
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
 
+        if(!user){
+            swal("Sorry!", "Please do registration first!", "error");
+            return;
+        }
         
 
         userLogin(email, password)
             .then(result => {
                 console.log(result.user)
+                e.target.reset()
                 swal("Good job!", "You are successfully logged in!", "success");
                 navigate(location?.state ? location.state: '/')
             })
             .catch(() => {  
                 
-                    if(!email){
-                        swal("Sorry!", "Email doesn't match!", "error");
-                     return;
-                    }
+                    // if(!email){
+                    //     swal("Sorry!", "Email doesn't match!", "error");
+                    //  return;
+                    // }
                  
             })
     }
