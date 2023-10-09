@@ -2,28 +2,34 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import swal from "sweetalert";
 
 
 const Login = () => {
 
-    const {userLogin} = useContext(AuthContext)
-    
+    const { user, userLogin } = useContext(AuthContext)
+
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
         userLogin(email, password)
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error=>{console.log(error)})
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => { console.log(error) })
     }
+
+    if (user) {
+        swal("Good job!", "You are successfully logged in!", "success");
+    }
+    
 
     return (
         <div>
             <div className="hero min-h-[80vh]">
                 <div className=" ">
-                    
+
                     <h1 className="text-2xl text-pink-500 font-bold text-center mb-2">Login</h1>
                     <div className=" card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
@@ -45,7 +51,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn bg-gradient-to-tr from-pink-600 to-pink-400 shadow-pink-500/40 text-white">Login</button>
                             </div>
-                        <p>Don't have an account? <Link to='/register' className="text-pink-600 font-bold">Register</Link></p>
+                            <p>Don't have an account? <Link to='/register' className="text-pink-600 font-bold">Register</Link></p>
                         </form>
                     </div>
                 </div>

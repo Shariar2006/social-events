@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import {  NavLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
+import swal from "sweetalert";
+
 
 const navlink = <>
     <li><NavLink to='/'
@@ -16,6 +18,9 @@ const Navbar = () => {
         logOut()
             .then(() => { })
             .catch(error => {console.log(error)})
+    }
+    if(!user){
+        swal("Good job!", "You are successfully logged out!", "success");
     }
     return (
         <div>
