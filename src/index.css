@@ -5,6 +5,13 @@
 .booking{
     background:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url('https://i.ibb.co/5ccJGhb/269-154806.jpg');
     background-size: cover;
-    
-
+}
+.font{
+    font-family: 'Dancing Script', cursive;
+}
+.font2{
+    font-family: 'Pacifico', cursive;
+}
+.font3{
+    font-family: 'Black Ops One', cursive;
 }

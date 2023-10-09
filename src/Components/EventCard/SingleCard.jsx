@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 
-const SingleCard = (props) => {
-    // const { id, EventType, card_img, price, Description } = props.card;
-    console.log(props.card)
+const SingleCard = ({card}) => {
+    // const { id, EventType, card_img, price, Description } = card;
+    console.log()
 
 
     return (
         <div>
-            <p>{}</p>
+            <p>{card?.EventType}</p>
         </div>
     );
 };

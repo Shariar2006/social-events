@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import {  NavLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
-import swal from "sweetalert";
+import '../../index.css'
+
 
 
 const navlink = <>
@@ -19,26 +20,24 @@ const Navbar = () => {
             .then(() => { })
             .catch(error => {console.log(error)})
     }
-    if(!user){
-        swal("Good job!", "You are successfully logged out!", "success");
-    }
+    
     return (
         <div>
-            <div className="navbar ">
+            <div className="navbar  shadow-lg">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
 
-                        <ul tabIndex={0} className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
+                        <ul tabIndex={0} className=" menu-sm dropdown-content mt-3 z-[1] p-2  rounded-box w-52 font2">
                             {navlink}
                         </ul>
                     </div>
-                    <h1 className="text-2xl font-bold">Happy <span className="text-pink-500">Events</span></h1>
+                    <h1 className="text-2xl  pl-2 font2">Happy <span className="text-pink-500">Events</span></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="text-xl font-semibold menu-horizontal mr-2">
+                    <ul className="text-xl menu-horizontal mr-2 font2">
                         {navlink}
                     </ul>
                     
@@ -47,10 +46,10 @@ const Navbar = () => {
                     {
                         user ? <>
                             <span>{user.email}</span>
-                            <a onClick={handleLogout} href="" className="btn ">Log Out</a>
+                            <a onClick={handleLogout} href="" className="btn font2">Log Out</a>
                         </> : 
 
-                    <button className="text-xl font-semibold"><NavLink to='/login'
+                    <button className="text-xl font-semibold pr-2 font2"><NavLink to='/login'
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : ""
                         }

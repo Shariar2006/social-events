@@ -17,7 +17,7 @@ import EventCard from "../EventCard/EventCard";
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('events.json')
+                loader: () => fetch('/events.json')
             },
             
             {
