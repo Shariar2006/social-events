@@ -1,5 +1,6 @@
 Website fetures:
--Here are 2 private routes
+
+- Here are 2 private routes
 - 2 private routes is 'contact us' and 'booked'
 
 
