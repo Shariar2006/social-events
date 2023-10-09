@@ -16,14 +16,17 @@ const Navbar = () => {
     const navlink = <>
         <li><NavLink to='/'
             className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Home</NavLink></li>
-        <li><NavLink to='/contactUs'
-            className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Contact Us</NavLink></li>
+
         <li><NavLink to='/register'
             className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Register</NavLink></li>
         {
 
-            user && <li><NavLink to='/bookedEvents'
-                className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Booked</NavLink></li>
+            user && <div className="flex">
+                <li><NavLink to='/contactUs'
+                    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Contact Us</NavLink></li>
+                <li><NavLink to='/bookedEvents'
+                    className={({ isActive, isPending }) => isPending ? "pending" : isActive ? " text-pink-500 underline rounded-lg px-3 py-2 " : "mx-2"}>Booked</NavLink></li>
+            </div>
         }
     </>
 
@@ -43,7 +46,7 @@ const Navbar = () => {
                     <h1 className="text-2xl  pl-2 font5">Happy <span className="text-pink-500">Events</span></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="text-xl menu-horizontal mr-2 font5">
+                    <ul className="text-xl w-[400px] menu-horizontal mr-2 font5">
                         {navlink}
                     </ul>
 

@@ -8,7 +8,7 @@ import '../../index.css'
 const Register = () => {
 
 
-    const { user,createUser } = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
     // const [registerError, setError] = useState('')
 
     const handleRegister = e => {
@@ -33,6 +33,7 @@ const Register = () => {
         createUser(email, password)
             .then((result) => {
                 console.log(result.user)
+                e.target.reset()
                 swal("Good job!", "You are successfully Registration!", "success");
                 <Navigate to='/login'></Navigate>
             })

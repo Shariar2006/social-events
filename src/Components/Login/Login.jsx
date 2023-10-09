@@ -23,7 +23,6 @@ const Login = () => {
             return;
         }
         
-
         userLogin(email, password)
             .then(result => {
                 console.log(result.user)
@@ -80,7 +79,11 @@ const Login = () => {
                                 <button className="btn bg-gradient-to-tr from-pink-600 to-pink-400 shadow-pink-500/40 text-white">Login</button>
                             </div>
                             <p>Don't have an account? <Link to='/register' className="text-pink-600 font-bold">Register</Link></p>
-                            <p>Log in with <span onClick={handleGoogleLogin} className="text-pink-600 cursor-pointer">Google</span></p>
+                            <hr />
+                            <div className="text-center">
+                            <p>or</p>
+                            <p>Continue with <span onClick={handleGoogleLogin} className="text-pink-600 cursor-pointer">Google</span></p>
+                            </div>
                         </form>
                     </div>
                 </div>
